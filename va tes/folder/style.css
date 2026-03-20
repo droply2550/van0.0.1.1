@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.box {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.active { border-color: #22c55e; }
+.attacker { border-color: #f43f5e; }
+
+button {
+    margin: 3px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #334155;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.minus { background: #475569; color: #cbd5e1; } /* สีปุ่มลบ */
+.front { background: #0ea5e9; }
+.calc { background: #f59e0b; color: #000; width: 45%; }
+.attack { background: #ef4444; width: 45%; }
+.reset-btn { background: #64748b; margin-bottom: 20px; padding: 10px 20px; }
+
+select, input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 6px;
+    background: #0f172a;
+    color: white;
+    border: 1px solid #334155;
+}
+
+.result { margin-top: 10px; color: #38bdf8; font-weight: bold; }
+
+.footer { margin-top: 40px; padding: 20px; background: #020617; border-radius: 15px; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.footer-box { background: #1e293b; padding: 15px; border-radius: 10px; }
+.calc-btn { background: #22c55e; width: 80%; }
+.random-btn { background: #8b5cf6; width: 80%; }
+.odd-even-btn { background: #f59e0b; width: 80%; color: #000; }
+.turn-res { margin-top: 10px; font-weight: bold; color: #a78bfa; }

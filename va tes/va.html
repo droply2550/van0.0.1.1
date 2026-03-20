@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanguard Battle Tool</title>
+    <link rel="stylesheet" href="/folder/style.css">
+</head>
+<body>
+
+    <h2>🔥 Vanguard Battle Tool</h2>
+    <button class="reset-btn" onclick="resetAll()">🔄 Reset All</button>
+
+    <div class="container">
+        <!-- Left Rear -->
+        <div class="box" id="box_l">
+            <h3>⬅️ Rear (Left)</h3>
+            <select id="l_base"></select>
+            <select id="l_boost"></select>
+            <select id="l_skill"></select>
+            <p>Power Bonus: <span id="l_trigger">0</span> (x10k)</p>
+            <p>Crit: <span id="l_crit">1</span></p>
+            <button onclick="addPower('l')">+10k</button>
+            <button onclick="addCrit('l')">+Crit</button>
+            <button class="minus" onclick="minusTrigger('l')">-10k</button>
+            <button class="minus" onclick="minusCrit('l')">-Crit</button> <!-- เพิ่มปุ่มนี้ -->
+            <button class="front" onclick="frontTrigger()">Front</button>
+            <br>
+            <button class="calc" onclick="calcZone('l')">คำนวณ</button>
+    
+            <div class="result" id="l_result">รวม: -</div>
+        </div>
+
+        <!-- Vanguard -->
+        <div class="box" id="box_v">
+            <h3>🔥 Vanguard</h3>
+            <select id="v_base"></select>
+            <select id="v_boost"></select>
+            <select id="v_skill"></select>
+            <p>Power Bonus: <span id="v_trigger">0</span> (x10k)</p>
+            <p>Crit: <span id="v_crit">1</span></p>
+            <button onclick="addPower('v')">+10k</button>
+            <button onclick="addCrit('v')">+Crit</button>
+            <button class="minus" onclick="minusTrigger('v')">-10k</button>
+            <button class="minus" onclick="minusCrit('v')">-Crit</button> <!-- เพิ่มปุ่มนี้ -->
+            <button class="front" onclick="frontTrigger()">Front</button>
+            <br>
+            <button class="calc" onclick="calcZone('v')">คำนวณ</button>
+         
+            <div class="result" id="v_result">รวม: -</div>
+        </div>
+
+        <!-- Right Rear -->
+        <div class="box" id="box_r">
+            <h3>➡️ Rear (Right)</h3>
+            <select id="r_base"></select>
+            <select id="r_boost"></select>
+            <select id="r_skill"></select>
+            <p>Power Bonus: <span id="r_trigger">0</span> (x10k)</p>
+            <p>Crit: <span id="r_crit">1</span></p>
+            <button onclick="addPower('r')">+10k</button>
+            <button onclick="addCrit('r')">+Crit</button>
+            <button class="minus" onclick="minusTrigger('r')">-10k</button>
+            <button class="minus" onclick="minusCrit('r')">-Crit</button> <!-- เพิ่มปุ่มนี้ -->
+            <button class="front" onclick="frontTrigger()">Front</button>
+            <br>
+            <button class="calc" onclick="calcZone('r')">คำนวณ</button>
+           
+            <div class="result" id="r_result">รวม: -</div>
+        </div>
+    </div>
+
+    <!-- FOOTER AREA -->
+    <div class="footer">
+        <div class="footer-grid">
+           
+
+            <div class="footer-box">
+                <h3>🎲 Random Turn</h3>
+                <div class="player-names">
+                    <input type="text" id="p1_name" placeholder="ผู้เล่น 1" value="Player 1">
+                    <input type="text" id="p2_name" placeholder="ผู้เล่น 2" value="Player 2">
+                </div>
+                <button class="random-btn" onclick="randomizeTurn()">สุ่มเริ่มก่อน/หลัง</button>
+                <div id="turn_result" class="turn-res">กดเพื่อสุ่ม</div>
+            </div>
+
+            <div class="footer-box">
+                <h3>🔢 สุ่มเลขคู่/คี่ (1-10)</h3>
+                <button class="odd-even-btn" onclick="randomOddEven()">สุ่มตัวเลข</button>
+                <div id="odd_even_result" class="turn-res">กดเพื่อสุ่ม</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/folder/script.js"></script>
+</body>
+</html>
